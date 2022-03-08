@@ -38,13 +38,13 @@
     --color_text_time_bottombar:#FFF;
     /* #endregion bottombar colors */
 
-    /* #region main area colors */
-    --bg_color_mainarea:#141922;
-    --color_links_navbar_mainarea:#707378;
-    --color_marked_border_links_mainarea:#ADFF2F;
-    --color_text_genre:#FFF;
-    --color_playlist_title:#FFF;
-    --color_playlist_subtitle:#787A7F;
+    /* #region explore_section colors */
+    --bg_color_explore:#141922;
+    --color_links_navbar_explore:#707378;
+    --color_marked_border_links_explore:#ADFF2F;
+    --color_text_genre_explore:#FFF;
+    --color_playlist_title_explore:#FFF;
+    --color_playlist_subtitle_explore:#787A7F;
     /* #endregion main area colors */
 }
 /* #endregion color palette */
@@ -54,9 +54,28 @@ body{
     font-family: 'Montserrat', sans-serif;
 }
 
+h2{
+    font-size: 24px;
+    font-weight: 700;
+}
+
+h3{
+    font-size: 16px;
+    font-weight: 700;
+}
+
 h4{
     font-size: 14px;
     font-weight: 600;
+}
+
+h5{
+    font-size: 13px;
+    font-weight: 600;
+}
+
+a{
+    text-decoration: none;
 }
 /* #endregion general rules */
 
@@ -71,7 +90,6 @@ h4{
     #site_main{
         width: 100%;
         height:calc(100vh - 90px);
-        border:2px solid black
     }
     /* #endregion site_main general rules */
 
@@ -112,6 +130,17 @@ h4{
 
             .sidebar_nav>*{
                 padding: 7px 0px 7px 0px;
+                position: relative;
+            }
+
+            .active_link_border{
+                height: 35px;
+                width: 3px;
+                position: absolute;
+                left: -21px;
+                top:50%;
+                transform: translate(0,-50%);
+                background-color: var(--color_marked_border_links_sidebar);
             }
 
             .sidebar_nav span{
@@ -139,6 +168,11 @@ h4{
                 font-weight: 600;
                 margin-left: 5px;
                 font-size: 14px;
+            }
+
+            .playlists{
+                max-height: calc(100vh - 491px);
+                overflow-y:auto; /* aggiunto per quando le playlist sono cosi tante da uscire dal contenitore */
             }
 
             .playlists>*{
@@ -188,18 +222,79 @@ h4{
         }
         /* #endregion lower_sidebar */
     /* #endregion sidebar */
+        .explore_section{
+            flex-grow:1;
+            background-color: var(--bg_color_explore);
+            padding: 0 20px 0px 20px;
+            overflow-y: auto;
+        }
+
+        .explore_nav{
+            justify-content: center;
+            padding: 23px 0 23px 0;
+            margin-top: 90px;
+            column-gap: 25px;
+        }
+
+        .explore_nav div{
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .explore_nav a{
+            color: var(--color_links_navbar_explore);
+        }
+         
+        .description{
+            margin: 28px 0 28px 0;
+        }
+
+        .explore_section h2 {
+            
+            color:var(--color_text_genre_explore);
+    
+        }
+
+        .cover_container{
+            column-gap: 1%;
+            flex-wrap: wrap;
+        }
+
+        .cover{
+            width: calc(100% * 1/6 - 1% + 1%/6);
+        }
+
+        .cover img{
+            width: 100%;
+            object-fit: cover;
+            vertical-align: middle; /* serve a togliere lo spazio che si crea tra container e img */
+        }
+
+        .cover_text{
+            margin-top: 16px;
+            text-align: center;
+            margin-bottom: 5px;
+        }
+
+        .explore_section h5{
+            margin-top: 5px;
+            color: var(--color_playlist_subtitle_explore);
+        }
+
+        .cover_text h3{
+            color: var(--color_playlist_title_explore);
+        }
+
+    /* #region explore_section */
+
+    /* #endregion explore_section */
+
 /* #endregion site_main */
 
 
 
 /* ------------------------------------------------------------------------------------------------- */
 
-/* #region media query */
-@media screen and (max-height:750px){
-    .playlists{
-        height:calc(100vh - 491px);
-        overflow-y: scroll;
+/* #region media query desktop first*/
 
-    }
-}
-/* #endregion media query */
+/* #endregion media query desktop first*/
