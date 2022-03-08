@@ -319,7 +319,22 @@ a{
 
 /* #endregion site_main */
 
+/* #region bottom_bar */
+.bottom_bar{
+    height: 90px;
+    background-color: var(--bg_color_bottombar);
+}
 
+.bottom_bar>*{
+    flex-basis: 0;
+    flex-grow: 1;
+    border: 1px solid red;
+}
+
+.bottom_center{
+    flex-grow: 2;
+}
+/* #endregion bottom_bar */
 
 /* ------------------------------------------------------------------------------------------------- */
 
