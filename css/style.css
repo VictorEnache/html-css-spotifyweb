@@ -60,6 +60,12 @@ h4{
 }
 /* #endregion general rules */
 
+/* #region utility rules */
+.flex_container{
+    display: flex;
+}
+/* #endregion utility rules */
+
 /* #region site_main */
     /* #region site_main general rules */
     #site_main{
@@ -70,73 +76,115 @@ h4{
     /* #endregion site_main general rules */
 
     /* #region sidebar */
-        /* #region sidebar logo */
-        .sidebar{
-            width: 210px;
-            height: 100%;
-            background-color:var(--bg_color_sidebar);
-            padding: 0px 21px 0px 21px;
+    .sidebar{
+        width: 230px;
+        height: 100%;
+        background-color:var(--bg_color_sidebar);
+        padding: 0px 21px 0px 21px;
+        flex-direction: column;
+    }
+        /* #region upper_sidebar */
+        .upper_sidebar{
+            flex-grow: 1;  /* inquesto modo la parte superiore aggiunge alla sua altezza data dal suo contenuto anche tutto lo spazio vuoto del flex_container*/
         }
-        
-        .logo{
-            padding: 20px 0px 20px 0px;
-        }
-        
-        .logo img{
-            height: 40px;
-            vertical-align: middle; /* Serve per togliere il padding in basso che si crea tra img e il suo contenitore */
+            /* #region sidebar logo */
+            .logo{
+                padding: 20px 0px 20px 0px;
+            }
             
-        }
-        /* #endregion sidebar logo */
+            .logo img{
+                height: 40px;
+                vertical-align: middle; /* Serve per togliere il padding in basso che si crea tra img e il suo contenitore */
+                
+            }
+            /* #endregion sidebar logo */
 
-        /* #region sidebar_nav */
-        .sidebar_nav{
-            margin-top: 4px;
+            /* #region sidebar_nav */
+            .sidebar_nav{
+                margin-top: 4px;
+            }
+
+            .sidebar_nav svg{
+                height: 26px;
+                vertical-align: middle;
+                fill: var(--color_icons_sidebar);
+            }
+
+            .sidebar_nav>*{
+                padding: 7px 0px 7px 0px;
+            }
+
+            .sidebar_nav span{
+                color:var(--color_links_sidebar);
+                font-size: 13px;
+                font-weight: 600;
+            }
+            /* #endregion sidebar_nav */
+
+            /* #region playlists_container */
+            .playlists_container h4{
+                color: var(--color_text_sidebar);
+                margin-top: 8px;
+                padding: 15px 0px 15px 0px;
+            }
+
+            .create_playlist i{
+                padding:  11px 12px 11px 12px;
+                background-color: var(--color_icons_sidebar);
+            }
+
+            .create_playlist span{
+                color: var(--color_links_sidebar);
+                font-weight: 600;
+                margin-left: 5px;
+                font-size: 14px;
+            }
+
+            .playlists>*{
+                font-size: 13px;
+                margin-top: 22px;
+                color: var(--color_links_sidebar);
+                font-weight: 600;
+            }
+            /* #endregion playlists_container */
+        /* #endregion upper_sidebar */
+
+        /* #region lower_sidebar */
+        .download{
+            font-size: 13px;
+            padding: 10px 0px 10px 0px;
+            border-bottom: 1px solid var(--color_icons_sidebar);
         }
 
-        .sidebar_nav svg{
-            height: 21px;
-            vertical-align: middle;
+        .download svg{
             fill: var(--color_icons_sidebar);
+            height: 16px;
+            vertical-align: middle;
         }
 
-        .sidebar_nav>*{
+        .download span{
+            font-weight: 600;
+            color: var(--color_links_sidebar);
+        }
+
+        .user_profile{
             padding: 7px 0px 7px 0px;
+            margin-top: 7px;
         }
 
-        .sidebar_nav span{
-            color:var(--color_links_sidebar);
-            font-size: 13px;
-            font-weight: 600;
-        }
-        /* #endregion sidebar_nav */
-
-        /* #region playlists_container */
-        .playlists_container h4{
-            color: var(--color_text_sidebar);
-            margin-top: 8px;
-            padding: 15px 0px 15px 0px;
-        }
-
-        .create_playlist i{
-            padding:  11px 12px 11px 12px;
+        .user_profile svg{
+            vertical-align: middle;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
             background-color: var(--color_icons_sidebar);
-        }
+        }        
 
-        .create_playlist span{
-            color: var(--color_links_sidebar);
-            font-weight: 600;
-            margin-left: 5px;
+        .user_profile span{
             font-size: 14px;
-        }
-
-        .playlists>*{
-            font-size: 13px;
-            margin-top: 22px;
-            color: var(--color_links_sidebar);
             font-weight: 600;
+            color: var(--color_text_sidebar);
         }
-        /* #endregion playlists_container */
-
+        /* #endregion lower_sidebar */
     /* #endregion sidebar */
 /* #endregion site_main */
