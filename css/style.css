@@ -19,7 +19,7 @@
     /* #endregion sidebar colors */
 
     /* #region topbar colors */
-    --bg_color_topbar:#080B12;
+    --bg_color_topbar:rgba(0,0,0,0.5);
     --btn_border_color_topbar:#C1C2C4;
     --btn_text_color_topbar:#F9F9FA;
     /* #endregion topbar colors */
@@ -222,17 +222,41 @@ a{
         }
         /* #endregion lower_sidebar */
     /* #endregion sidebar */
-        .explore_section{
-            flex-grow:1;
-            background-color: var(--bg_color_explore);
-            padding: 0 20px 0px 20px;
-            overflow-y: auto;
+
+    /* #region explore_section */
+    .explore_section{
+        width: calc(100% - 230px);
+        background-color: var(--bg_color_explore);
+        overflow-y: auto;
+    }
+
+        /* #region topbar */
+        .top_bar{
+            position: sticky;
+            height:90px;
+            top:0;
+            left:0;
+            background-color: var(--bg_color_topbar);
         }
 
+        .top_bar a{
+            display: inline-block;
+            color: var(--btn_text_color_topbar);
+            font-size: 13px;
+            padding: 11px 41px 11px 41px;
+            border: 1px solid var(--btn_border_color_topbar);
+            border-radius: 32px;
+            position: absolute;
+            top:50%;
+            right: 20px;
+            transform: translate(0, -50%);
+        }
+        /* #endregion topbar */
+        
+        /* #region explore_nav */
         .explore_nav{
             justify-content: center;
             padding: 23px 0 23px 0;
-            margin-top: 90px;
             column-gap: 25px;
         }
 
@@ -244,7 +268,13 @@ a{
         .explore_nav a{
             color: var(--color_links_navbar_explore);
         }
-         
+        /* #endregion explore_nav */
+
+        /* #region explore_section sections */
+        .explore_section section{
+            padding: 0 20px 0px 20px;
+        }
+        
         .description{
             margin: 28px 0 28px 0;
         }
@@ -252,7 +282,7 @@ a{
         .explore_section h2 {
             
             color:var(--color_text_genre_explore);
-    
+
         }
 
         .cover_container{
@@ -284,9 +314,7 @@ a{
         .cover_text h3{
             color: var(--color_playlist_title_explore);
         }
-
-    /* #region explore_section */
-
+        /* #endregion explore section sections */
     /* #endregion explore_section */
 
 /* #endregion site_main */
