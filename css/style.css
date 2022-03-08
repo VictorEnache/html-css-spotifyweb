@@ -334,6 +334,54 @@ a{
 .bottom_center{
     flex-grow: 2;
 }
+    /* #region bottom_left */
+    .bottom_left{
+        align-items: center;
+        padding: 0px 11px 0px 11px;
+    }
+
+    .bottom_left>*{
+        margin-right: 13px;
+    }
+
+    .playing_img{
+        width: 42px;
+    }
+
+    .playing_img img{
+        width: 100%;
+        object-fit: cover;
+        vertical-align: middle;
+    }
+
+    .playing_text h5{
+        font-weight: 700;
+        color: var(--color_singer_name_bottombar);
+    }
+
+    .playing_text div{
+        font-size: 12px;
+        font-weight: 600;
+        color: var(--color_song_name_bottombar);
+    }
+
+    .heart, .folder{
+        color: var(--color_like_save_icons_bottombar);
+    }
+
+    .heart{
+        margin-left: 20px;
+    }
+    /* #endregion bottom_left */
+
+    /* #region bottom_center */
+    .bottom_center{
+        flex-grow: 2;
+    }
+
+
+    /* #endregion bottom_center */
+
 /* #endregion bottom_bar */
 
 /* ------------------------------------------------------------------------------------------------- */
