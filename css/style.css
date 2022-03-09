@@ -323,17 +323,18 @@ a{
 .bottom_bar{
     height: 90px;
     background-color: var(--bg_color_bottombar);
+    padding: 0 11px 0 11px;
 }
 
-.bottom_left, .bottom_right{
-    width: 230px;
+.bottom_bar>*{
+    flex:1;
 }
 
     /* #region bottom_left */
     .bottom_left{
         align-items: center;
-        padding: 0px 0px 0px 11px;
         column-gap: 13px;
+        
     }
 
     .playing_img{
@@ -365,7 +366,7 @@ a{
 
     /* #region bottom_center */
     .bottom_center{
-        width: calc(100% - 460px);
+        flex-grow: 2;
     }
 
     .player_icons{
@@ -396,7 +397,7 @@ a{
     }
 
     .time_bar{
-        width: 50%;
+        width: 60%;
         height:4px;
         background-color: var(--bg_color_time_bar_bottombar);
         border-radius: 4px;
@@ -415,11 +416,12 @@ a{
         height: 100%;
         align-items: center;
         column-gap: 20px;
+        justify-content: flex-end;
         color: var(--color_interface_icons_bottombar);
     }
 
     .volume_bar{
-        width: 45%;
+        width: 120px;
         height: 4px;
         background-color: var(--bg_color_volume_bar_bottombar);
         border-radius: 4px;
