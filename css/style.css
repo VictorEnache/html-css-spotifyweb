@@ -110,8 +110,6 @@ a{
         vertical-align: middle; 
         
     }
-
-
     
     .sidebar_nav{
         margin-top: 4px;
@@ -126,6 +124,10 @@ a{
     .sidebar_nav>*{
         padding: 7px 0px 7px 0px;
         position: relative;
+    }
+
+    .sidebar_nav>.home span{
+        color:var(--primary_color);
     }
 
     .active_link_border{
@@ -239,9 +241,25 @@ a{
     .explore_nav{
         justify-content: center;
         flex-wrap: wrap;
+        row-gap: 9px;
         padding: 23px 0 23px 0;
         column-gap: 25px;
     }    
+
+    .explore_nav>div{
+        position: relative;
+    }
+
+    .underline{
+        height: 3px;
+        width: 35px;
+        position: absolute;
+        bottom: -3px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        background-color:var(--active_link_border);
+
+    }
 
     .explore_section section{
         padding: 0 20px 0px 20px;
@@ -521,6 +539,7 @@ a{
     }
 
     .playing_text{
+        width: 100%;
         display: flex;
         justify-content: center;
         align-items: baseline;
