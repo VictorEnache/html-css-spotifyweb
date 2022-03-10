@@ -31,10 +31,12 @@ body{
 
 h2{
     font-size: 24px;
+    color:var(--primary_color);
 }
 
 h3{
     font-size: 16px;
+    color: var(--primary_color);
 }
 
 h2,h3{
@@ -65,6 +67,10 @@ a{
 
 .h_100{
     height:100%;
+}
+
+.p_color{
+    color: var(--primary_color);
 }
 /* #endregion utility rules */
 
@@ -132,14 +138,21 @@ a{
         background-color: var(--active_link_border);
     }
 
-    .sidebar_nav span{
+    .sidebar_nav span,
+    .create_playlist span,
+    .playlists>*,
+    .download,
+    .explore_nav a,
+    .explore_section h5,
+    .playing_text div,
+    .left_icons
+    {
         color:var(--secondary_color);
     }
 
 
 
     .playlists_container h4{
-        color: var(--primary_color);
         margin-top: 8px;
         padding: 15px 0px 15px 0px;
     }
@@ -150,7 +163,6 @@ a{
     }
 
     .create_playlist span{
-        color: var(--secondary_color);
         margin-left: 5px;
         font-size: 14px;
     }
@@ -162,7 +174,6 @@ a{
 
     .playlists>*{
         margin-top: 22px;
-        color: var(--secondary_color);
     }
 
         
@@ -176,10 +187,6 @@ a{
         fill: var(--sidebar_icons);
         height: 16px;
         vertical-align: middle;
-    }
-
-    .download span{
-        color: var(--secondary_color);
     }
 
     .user_profile{
@@ -197,7 +204,6 @@ a{
 
     .user_profile span{
         font-size: 14px;
-        color: var(--primary_color);
     }
 /* #endregion sidebar */
 
@@ -220,7 +226,6 @@ a{
 
     .top_bar a{
         display: inline-block;
-        color: var(--primary_color);
         padding: 11px 41px 11px 41px;
         border: 1px solid var(--primary_color);
         border-radius: 32px;
@@ -236,12 +241,7 @@ a{
         flex-wrap: wrap;
         padding: 23px 0 23px 0;
         column-gap: 25px;
-    }
-
-    .explore_nav a{
-        color: var(--secondary_color);
-    }
-    
+    }    
 
     .explore_section section{
         padding: 0 20px 0px 20px;
@@ -277,12 +277,6 @@ a{
         margin: 28px 0 28px 0;
     }
 
-    .explore_section h2 {
-        
-        color:var(--primary_color);
-
-    }
-
     .cover_container{
         column-gap: 1%;
         flex-wrap: wrap;
@@ -306,11 +300,6 @@ a{
 
     .explore_section h5{
         margin-top: 5px;
-        color: var(--secondary_color);
-    }
-
-    .cover_text h3{
-        color: var(--primary_color);
     }
 
 /* #endregion explore_section */
@@ -318,17 +307,16 @@ a{
 
 
 /* #region bottom_bar */
-.bottom_bar{
-    height: 90px;
-    background-color: var(--bottombar_bg_color);
-    padding: 0 11px 0 11px;
-}
+    .bottom_bar{
+        height: 90px;
+        background-color: var(--bottombar_bg_color);
+        padding: 0 11px 0 11px;
+    }
 
-.bottom_bar>*{
-    flex:1;
-}
+    .bottom_bar>*{
+        flex:1;
+    }
 
-    /* #region bottom_left */
     .bottom_left{
         align-items: center;
         column-gap: 13px;
@@ -347,25 +335,16 @@ a{
 
     .playing_text h5{
         font-weight: 700;
-        color: var(--primary_color);
     }
 
     .playing_text div{
         font-size: 12px;
-        color: var(--secondary_color);
     }
 
     .left_icons{
         column-gap:13px;
     }
-
-    .heart, .folder{
-        color: var(--secondary_color);
-    }
-
-    /* #endregion bottom_left */
-
-    /* #region bottom_center */
+    
     .bottom_center{
         flex-grow: 2;
     }
@@ -375,7 +354,6 @@ a{
         align-items: center;
         column-gap: 32px;
         height: 50%;
-        color: var(--primary_color);
     }
 
     .player_icons>.fa-play-circle{
@@ -391,7 +369,6 @@ a{
         justify-content: center;
         align-items: center;
         height: 50%;
-        color: var(--primary_color);
         padding-bottom: 15px;
         column-gap: 2%;
     }
@@ -408,14 +385,13 @@ a{
         background-color: var(--primary_color);
         border-radius: 4px;
     }
-    /* #endregion bottom_center */
+    
 
 
     .bottom_right{
         align-items: center;
         column-gap: 20px;
         justify-content: flex-end;
-        color: var(--primary_color);
     }
 
     .volume_bar{
