@@ -8,44 +8,18 @@
 
 /* #region color palette */
 :root{
-    /* #region sidebar colors */
-    --bg_color_sidebar:#000;
-    --color_icons_sidebar:#A3A3A3;
-    --color_active_icons_sidebar:#D2D2D2;
-    --color_links_sidebar:#696969;
-    --color_active_links_sidebar:#F8F9F8;
-    --color_marked_border_links_sidebar:#ADFF2F;
-    --color_text_sidebar:#FFF;
-    /* #endregion sidebar colors */
+    --primary_color:#fff;
+    --secondary_color:#6F6F6F;
+    --active_link_border:#ADFF2F;
 
-    /* #region topbar colors */
-    --bg_color_topbar:rgba(0,0,0,0.5);
-    --btn_border_color_topbar:#C1C2C4;
-    --btn_text_color_topbar:#F9F9FA;
-    /* #endregion topbar colors */
+    --sidebar_bg_color:#000;
+    --sidebar_icons:#A3A3A3;
 
-    /* #region bottombar colors */
-    --bg_color_bottombar:#282828;
-    --color_player_icons_bottombar:#FFF;
-    --color_interface_icons_bottombar:#FFF; /* si rifersce alle 3 icone sulla destra nella barra inferiore (visualizzazione,schermo,volume) */
-    --bg_color_time_bar_bottombar:#5A5A5A;
-    --color_time_bar_bottombar:#C1C1C1;
-    --bg_color_volume_bar_bottombar:#5A5A5A;
-    --color_volume_bar_bottombar:#C1C1C1;
-    --color_like_save_icons_bottombar:#6F6F6F;
-    --color_singer_name_bottombar:#FFF;
-    --color_song_name_bottombar:#6F6F6F;
-    --color_text_time_bottombar:#FFF;
-    /* #endregion bottombar colors */
+    --topbar_bg_color:rgba(0,0,0,0.5);
 
-    /* #region explore_section colors */
-    --bg_color_explore:#141922;
-    --color_links_navbar_explore:#707378;
-    --color_marked_border_links_explore:#ADFF2F;
-    --color_text_genre_explore:#FFF;
-    --color_playlist_title_explore:#FFF;
-    --color_playlist_subtitle_explore:#787A7F;
-    /* #endregion main area colors */
+    --bottombar_bg_color:#282828;
+
+    --explore_bg_color:#141922;
 }
 /* #endregion color palette */
 
@@ -97,7 +71,7 @@ a{
     .sidebar{
         width: 230px;
         height: 100%;
-        background-color:var(--bg_color_sidebar);
+        background-color:var(--sidebar_bg_color);
         padding: 0px 21px 0px 21px;
         flex-direction: column;
         overflow: hidden;
@@ -133,7 +107,7 @@ a{
             .sidebar_nav svg{
                 height: 26px;
                 vertical-align: middle;
-                fill: var(--color_icons_sidebar);
+                fill: var(--sidebar_icons);
             }
 
             .sidebar_nav>*{
@@ -148,11 +122,11 @@ a{
                 left: -21px;
                 top:50%;
                 transform: translate(0,-50%);
-                background-color: var(--color_marked_border_links_sidebar);
+                background-color: var(--active_link_border);
             }
 
             .sidebar_nav span{
-                color:var(--color_links_sidebar);
+                color:var(--secondary_color);
                 font-size: 13px;
                 font-weight: 600;
             }
@@ -161,18 +135,18 @@ a{
             /* #region playlists_container */
 
             .playlists_container h4{
-                color: var(--color_text_sidebar);
+                color: var(--primary_color);
                 margin-top: 8px;
                 padding: 15px 0px 15px 0px;
             }
 
             .create_playlist i{
                 padding:  11px 12px 11px 12px;
-                background-color: var(--color_icons_sidebar);
+                background-color: var(--sidebar_icons);
             }
 
             .create_playlist span{
-                color: var(--color_links_sidebar);
+                color: var(--secondary_color);
                 font-weight: 600;
                 margin-left: 5px;
                 font-size: 14px;
@@ -186,7 +160,7 @@ a{
             .playlists>*{
                 font-size: 13px;
                 margin-top: 22px;
-                color: var(--color_links_sidebar);
+                color: var(--secondary_color);
                 font-weight: 600;
             }
             /* #endregion playlists_container */
@@ -196,18 +170,18 @@ a{
         .download{
             font-size: 13px;
             padding: 10px 0px 10px 0px;
-            border-bottom: 1px solid var(--color_icons_sidebar);
+            border-bottom: 1px solid var(--sidebar_icons);
         }
 
         .download svg{
-            fill: var(--color_icons_sidebar);
+            fill: var(--sidebar_icons);
             height: 16px;
             vertical-align: middle;
         }
 
         .download span{
             font-weight: 600;
-            color: var(--color_links_sidebar);
+            color: var(--secondary_color);
         }
 
         .user_profile{
@@ -220,13 +194,13 @@ a{
             width: 25px;
             height: 25px;
             border-radius: 50%;
-            background-color: var(--color_icons_sidebar);
+            background-color: var(--sidebar_icons);
         }        
 
         .user_profile span{
             font-size: 14px;
             font-weight: 600;
-            color: var(--color_text_sidebar);
+            color: var(--primary_color);
         }
         /* #endregion lower_sidebar */
     /* #endregion sidebar */
@@ -234,7 +208,7 @@ a{
     /* #region 2^ explore_section */
     .explore_section{
         width: calc(100% - 230px);
-        background-color: var(--bg_color_explore);
+        background-color: var(--explore_bg_color);
         overflow-y: auto;
     }
 
@@ -244,15 +218,15 @@ a{
             height:90px;
             top:0;
             left:0;
-            background-color: var(--bg_color_topbar);
+            background-color: var(--topbar_bg_color);
         }
 
         .top_bar a{
             display: inline-block;
-            color: var(--btn_text_color_topbar);
+            color: var(--primary_color);
             font-size: 13px;
             padding: 11px 41px 11px 41px;
-            border: 1px solid var(--btn_border_color_topbar);
+            border: 1px solid var(--primary_color);
             border-radius: 32px;
             position: absolute;
             top:50%;
@@ -275,7 +249,7 @@ a{
         }
 
         .explore_nav a{
-            color: var(--color_links_navbar_explore);
+            color: var(--secondary_color);
         }
         /* #endregion explore_nav */
 
@@ -316,7 +290,7 @@ a{
 
         .explore_section h2 {
             
-            color:var(--color_text_genre_explore);
+            color:var(--primary_color);
 
         }
 
@@ -343,11 +317,11 @@ a{
 
         .explore_section h5{
             margin-top: 5px;
-            color: var(--color_playlist_subtitle_explore);
+            color: var(--secondary_color);
         }
 
         .cover_text h3{
-            color: var(--color_playlist_title_explore);
+            color: var(--primary_color);
         }
         /* #endregion explore section sections */
     /* #endregion explore_section */
@@ -357,7 +331,7 @@ a{
 /* #region bottom_bar */
 .bottom_bar{
     height: 90px;
-    background-color: var(--bg_color_bottombar);
+    background-color: var(--bottombar_bg_color);
     padding: 0 11px 0 11px;
 }
 
@@ -384,13 +358,13 @@ a{
 
     .playing_text h5{
         font-weight: 700;
-        color: var(--color_singer_name_bottombar);
+        color: var(--primary_color);
     }
 
     .playing_text div{
         font-size: 12px;
         font-weight: 600;
-        color: var(--color_song_name_bottombar);
+        color: var(--secondary_color);
     }
 
     .left_icons{
@@ -398,7 +372,7 @@ a{
     }
 
     .heart, .folder{
-        color: var(--color_like_save_icons_bottombar);
+        color: var(--secondary_color);
     }
 
     /* #endregion bottom_left */
@@ -413,7 +387,7 @@ a{
         align-items: center;
         column-gap: 32px;
         height: 50%;
-        color: var(--color_player_icons_bottombar);
+        color: var(--primary_color);
     }
 
     .player_icons>.fa-play-circle{
@@ -429,7 +403,7 @@ a{
         justify-content: center;
         align-items: center;
         height: 50%;
-        color: var(--color_text_time_bottombar);
+        color: var(--primary_color);
         font-size: 13px;
         padding-bottom: 15px;
         column-gap: 2%;
@@ -438,14 +412,14 @@ a{
     .time_bar{
         width: 60%;
         height:4px;
-        background-color: var(--bg_color_time_bar_bottombar);
+        background-color: var(--secondary_color);
         border-radius: 4px;
     }
 
     .time{
         height: 100%;
         width: 20%;
-        background-color: var(--color_time_bar_bottombar);
+        background-color: var(--primary_color);
         border-radius: 4px;
     }
     /* #endregion bottom_center */
@@ -456,20 +430,20 @@ a{
         align-items: center;
         column-gap: 20px;
         justify-content: flex-end;
-        color: var(--color_interface_icons_bottombar);
+        color: var(--primary_color);
     }
 
     .volume_bar{
         width: 120px;
         height: 4px;
-        background-color: var(--bg_color_volume_bar_bottombar);
+        background-color: var(--secondary_color);
         border-radius: 4px;
     }
 
     .volume{
         height: 100%;
         width: 50%;
-        background-color: var(--color_volume_bar_bottombar);
+        background-color: var(--primary_color);
         border-radius: 4px;
     }
 /* #endregion bottom_bar */
