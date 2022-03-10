@@ -88,6 +88,7 @@ a{
         padding: 0px 21px 0px 21px;
         flex-direction: column;
         overflow: hidden;
+        transition: width 0.75s;
     }
         
     .upper_sidebar{
@@ -566,5 +567,30 @@ a{
         font-size: 16px;
     }
 
+}
+
+@media screen and (max-height:500px){
+    .top_bar{
+        height:0;
+        transition: height 2s;
+    }
+
+    .top_bar a{
+        display: block;
+        font-size: 0;
+        padding: 0;
+        transition: font-size 2s, padding 2s;
+        animation: border 0.5s linear 1.5s infinite;
+    }
+
+@keyframes border {
+    0%{
+        border:none;
+    }
+    100%{
+        border:none;
+    }
+    
+}
 }
 /* #endregion media query desktop first*/
