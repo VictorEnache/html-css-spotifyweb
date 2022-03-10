@@ -88,7 +88,7 @@ a{
         padding: 0px 21px 0px 21px;
         flex-direction: column;
         overflow: hidden;
-        transition: width 0.75s;
+        transition: width 0.3s;
     }
         
     .upper_sidebar{
@@ -225,6 +225,7 @@ a{
         left:0;
         background-color: var(--topbar_bg_color);
         z-index: 10;
+        transition: height 2s;
     }
 
     .top_bar a{
@@ -236,6 +237,7 @@ a{
         top:50%;
         right: 20px;
         transform: translate(0, -50%);
+        transition: font-size 2s , padding 2s ;
     }
         
     
@@ -569,7 +571,7 @@ a{
 
 }
 
-@media screen and (max-height:500px){
+@media screen and (max-height:568px){
     .top_bar{
         height:0;
         transition: height 2s;
@@ -579,7 +581,7 @@ a{
         display: block;
         font-size: 0;
         padding: 0;
-        transition: font-size 2s, padding 2s;
+        transition: font-size 2s , padding 2s ;
         animation: border 0.5s linear 1.5s infinite;
     }
 
