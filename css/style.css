@@ -650,6 +650,12 @@ a{
 
 }
 
+@media screen and (max-width:320px){
+    .cover{
+        width: 100%;
+    }
+}
+
 @media screen and (max-height:568px){
     .top_bar{
         height:0;
