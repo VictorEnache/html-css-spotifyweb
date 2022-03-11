@@ -457,7 +457,7 @@ a{
 .explore_nav a:hover,
 .playlists div:hover,
 .left_icons i:hover,
-.download span:hover,
+.download:hover span,
 .sidebar_nav>div:hover span,
 .create_playlist:hover span
 {
@@ -471,6 +471,10 @@ a{
 
 .create_playlist:hover i{
     background-color: var(--primary_color);
+}
+
+.download:hover svg{
+    fill: var(--primary_color);
 }
 
 .playing_text div:hover{
