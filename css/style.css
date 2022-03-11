@@ -455,15 +455,22 @@ a{
 
 /* #region on hover effects */
 .explore_nav a:hover,
-.sidebar span:hover,
 .playlists div:hover,
-.left_icons i:hover
+.left_icons i:hover,
+.download span:hover,
+.sidebar_nav>div:hover span,
+.create_playlist:hover span
 {
     color: var(--primary_color);
 }
 
-.sidebar_nav span:hover ~ svg{
+.sidebar_nav>div:hover svg{
     fill: var(--primary_color);
+}
+
+
+.create_playlist:hover i{
+    background-color: var(--primary_color);
 }
 
 .playing_text div:hover{
