@@ -237,7 +237,7 @@ a{
         top:50%;
         right: 20px;
         transform: translate(0, -50%);
-        transition: font-size 2s , padding 2s ;
+        transition: font-size 2s , padding 2s, transform 0.3s, top 0.3s;
     }
         
     
@@ -325,8 +325,6 @@ a{
 
 /* #endregion explore_section */
 
-
-
 /* #region bottom_bar */
     .bottom_bar{
         height: 90px;
@@ -399,12 +397,25 @@ a{
         height:4px;
         background-color: var(--secondary_color);
         border-radius: 4px;
+        position: relative;
+        
     }
 
     .time{
         width: 20%;
         background-color: var(--primary_color);
         border-radius: 4px;
+    }
+
+    .drag{
+        width: 20px;
+        height: 20px;
+        background-color: var(--primary_color);
+        border-radius: 50%;
+        position: absolute;
+        top:-8px;
+        left: 19.8%;
+        display: none;
     }
     
 
@@ -420,6 +431,7 @@ a{
         height: 4px;
         background-color: var(--secondary_color);
         border-radius: 4px;
+        position: relative;
     }
 
     .volume{
@@ -427,8 +439,64 @@ a{
         background-color: var(--primary_color);
         border-radius: 4px;
     }
+
+    .drag_volume{
+        width: 20px;
+        height: 20px;
+        background-color: var(--primary_color);
+        border-radius: 50%;
+        position: absolute;
+        top:-8px;
+        left: 49.7%;
+        display: none;
+    }
 /* #endregion bottom_bar */
 
+
+/* #region on hover effects */
+.explore_nav a:hover,
+.sidebar span:hover,
+.playlists div:hover,
+.left_icons i:hover
+{
+    color: var(--primary_color);
+}
+
+.sidebar_nav span:hover ~ svg{
+    fill: var(--primary_color);
+}
+
+.playing_text div:hover{
+    color: var(--primary_color);
+    text-decoration: underline;
+}
+
+.top_bar a:hover{
+    transform: scale(1.1);
+    top:30%;
+    transition: transform 0.3s, top 0.3s;
+}
+
+.player_icons .fa-play-circle:hover{
+    transform: scale(1.1);
+}
+
+.time_bar_container:hover .time{
+    background-color: var(--active_link_border);
+}
+
+.time_bar_container:hover .drag{
+    display: block;
+}
+
+.volume_bar:hover .volume{
+    background-color: var(--active_link_border);
+}
+
+.volume_bar:hover .drag_volume{
+    display: block;
+}
+/* #endregion on hover effects */
 /* ------------------------------------------------------------------------------------------------- */
 
 /* #region media query desktop first*/
@@ -585,13 +653,13 @@ a{
         animation: border 0.5s linear 1.5s infinite;
     }
 
-@keyframes border {
-    0%{
-        border:none;
-    }
-    100%{
-        border:none;
-    }
+    @keyframes border {
+        0%{
+            border:none;
+        }
+        100%{
+            border:none;
+        }
     
 }
 }
